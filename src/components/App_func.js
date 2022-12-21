@@ -1,13 +1,13 @@
 import React from 'react';
-import Contador from './components/Contador'
-import Jsx from './components/Jsx'
-import Lista from './components/Lista'
-import Formulario from './components/Formulario'
-import FormHook from './components/FormHook'
-import FormHooks_2 from './components/FormHooks_2'
+import Contador from './Contador'
+import Jsx from './Jsx'
+import Lista from './Lista'
+import Formulario from './Formulario'
+import FormHook from './FormHook'
+import FormHooks_2 from './FormHooks_2'
 //import Binary from './components/FormBinary'
-import Saludo from './components/Saludo'
-import Comentario from './components/Comentario'
+import Saludo from './Saludo'
+import Comentario from './Comentario'
 
 
 function App_func() {

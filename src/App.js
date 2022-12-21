@@ -1,10 +1,12 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Inicio from './components/Inicio';
 import CrudUser from './components/CrudUser';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
+import CommentDetail from './components/CommentDetail';
 import ErrorPage from './components/ErrorPage';
+import Comments from './components/Comments';
 
 const App = () => {
 
@@ -26,6 +28,9 @@ const App = () => {
                                     <NavLink to="CrudUser" className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")} style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}>User Crud</NavLink>
                                 </li>
                                 <li className="nav-item" >
+                                    <NavLink to="Comments" className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")} style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}>Comments</NavLink>
+                                </li>
+                                <li className="nav-item" >
                                     <NavLink to="Nosotros" className={({ isActive }) => "nav-link" + (isActive ? " activated" : "")} style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })}>Nosotros</NavLink>
                                 </li>
                                 <li className="nav-item" >
@@ -44,6 +49,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" exact element={<Inicio />} errorElement={<ErrorPage />} />
                     <Route path="/CrudUser" element={<CrudUser />} />
+                    <Route path="/Comments/:id" element={<CommentDetail />} /> 
+                    <Route path="/Comments" element={<Comments />} />                   
                     <Route path="/Nosotros" element={<Nosotros />} />
                     <Route path="/Contacto" element={<Contacto />} />
                 </Routes>
